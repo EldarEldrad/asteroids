@@ -1,0 +1,7 @@
+D:\Unity Projects\DK.Asteroids.GameLogic\bin\Debug\DK.Asteroids.GameLogic.dll
+D:\Unity Projects\DK.Asteroids.GameLogic\bin\Debug\DK.Asteroids.GameLogic.pdb
+D:\Unity Projects\Asteroids\Assets\ClassLibraries\DK.Asteroids.GameLogic.dll
+D:\Unity Projects\DK.Asteroids.GameLogic\obj\Debug\DK.Asteroids.GameLogic.dll
+D:\Unity Projects\DK.Asteroids.GameLogic\obj\Debug\DK.Asteroids.GameLogic.csprojResolveAssemblyReference.cache
+D:\Unity Projects\Asteroids\Assets\ClassLibraries\DK.Asteroids.GameLogic.pdb
+D:\Unity Projects\DK.Asteroids.GameLogic\obj\Debug\DK.Asteroids.GameLogic.pdb
