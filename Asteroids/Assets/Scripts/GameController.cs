@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
             Instantiate(background, new Vector3(0f, -1f, 0f), Quaternion.identity);
         }
 
-        GameBoundary.height = GameObject.FindGameObjectWithTag(Constants.Tags.MainCamera).GetComponent<Camera>().orthographicSize * 0.9f;
+        GameBoundary.height = GameObject.FindGameObjectWithTag(Constants.Tags.MainCamera).GetComponent<Camera>().orthographicSize;
         GameBoundary.width = GameBoundary.height / Screen.height * Screen.width;
 
         Player.SetPlayerToNull();

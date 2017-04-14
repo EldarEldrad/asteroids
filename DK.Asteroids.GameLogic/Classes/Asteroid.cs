@@ -40,6 +40,12 @@ namespace DK.Asteroids.GameLogic.Classes
             }
         }
 
+        public void OutOfBoundary()
+        {
+            if (Utils.IsWithinBoundary(obj)) return;
+            Utils.ReturnToBoundary(obj);
+        }
+
         public void ChangeRepresentation()
         {
             GameObject newlyCreated;

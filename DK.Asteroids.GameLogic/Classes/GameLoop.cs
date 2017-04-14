@@ -13,7 +13,6 @@ namespace DK.Asteroids.GameLogic.Classes
             isStopped = true;
             Spawner.StopSpawn();
             Time.timeScale = 0;
-            //Player.SetPlayerToNull();
         }
 
         public static void Restart()

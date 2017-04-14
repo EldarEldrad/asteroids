@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     void Update ()
     {
+        player.OutOfBoundary();
+
         if (player != null)
         {
             player.UpdateAddLaser();
@@ -48,8 +50,9 @@ public class PlayerController : MonoBehaviour
             {
                 audioSource.clip = bulletAudio;
                 audioSource.Play();
-                Instantiate(GameLoop.isSpriteRepresentation ? bulletShotSprite : bulletShot,
+                var bullet = Instantiate(GameLoop.isSpriteRepresentation ? bulletShotSprite : bulletShot,
                     playerShotBulletSpawn.position, playerShotBulletSpawn.rotation);
+                Destroy(bullet, 2f);
             }
             if (Input.GetButtonDown(Constants.Inputs.LaserShot) && player.TryShootLaser())
             {

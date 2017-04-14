@@ -40,29 +40,16 @@ namespace DK.Asteroids.GameLogic.Classes
 
         private static Vector3 GenerateSpawnPosition()
         {
-            int side = Random.Range(0, 4);
+            var position = new Vector3(Random.Range(-GameBoundary.width, GameBoundary.width),
+                                        0f,
+                                        Random.Range(-GameBoundary.height, GameBoundary.height));
 
-            switch(side)
+            var playerPosition = Player.GetPlayerTransform();
+            if((position - playerPosition.position).magnitude < 7)
             {
-                case 0:
-                    return new Vector3(Random.Range(-GameBoundary.width, GameBoundary.width),
-                                        0f,
-                                        GameBoundary.height * 1.2f);
-                case 1:
-                    return new Vector3(GameBoundary.width * 1.2f,
-                                        0f,
-                                        Random.Range(-GameBoundary.height, GameBoundary.height));
-                case 2:
-                    return new Vector3(Random.Range(-GameBoundary.width, GameBoundary.width),
-                                        0f,
-                                        - GameBoundary.height * 1.2f);
-                case 3:
-                    return new Vector3(- GameBoundary.width * 1.2f,
-                                        0f,
-                                        Random.Range(-GameBoundary.height, GameBoundary.height));
-                default:
-                    return Vector3.zero;
+                position = (position - playerPosition.position).normalized * 7;
             }
+            return position;
         }
     }
 }

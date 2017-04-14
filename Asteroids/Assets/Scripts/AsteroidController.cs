@@ -29,6 +29,8 @@ public class AsteroidController : MonoBehaviour
 
     void Update()
     {
+        asteroid.OutOfBoundary();
+
         if (Input.GetButtonDown(Constants.Inputs.Representation))
         {
             asteroid.ChangeRepresentation();

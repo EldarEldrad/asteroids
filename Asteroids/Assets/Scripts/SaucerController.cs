@@ -19,7 +19,6 @@ public class SaucerController : MonoBehaviour
     public GameObject thisObjectSprite;
 
     private Saucer saucer;
-    private Player player;
 
 	void Start ()
     {
@@ -29,20 +28,18 @@ public class SaucerController : MonoBehaviour
 
 	void Update ()
     {
+        saucer.OutOfBoundary();
+
         if (Input.GetButtonDown(Constants.Inputs.Representation))
         {
             saucer.ChangeRepresentation();
         }
 
-        if (player == null)
+        var playerTransform = Player.GetPlayerTransform();
+        if (playerTransform)
         {
-            player = Player.GetPlayer();
-        }
-
-        if (player != null)
-        {
-            saucer.AlignToTarget(player.GetPlayerTransform());
-            saucer.MoveToTarget(player.GetPlayerTransform());
+            saucer.AlignToTarget(playerTransform);
+            saucer.MoveToTarget(playerTransform);
         }
     }
 

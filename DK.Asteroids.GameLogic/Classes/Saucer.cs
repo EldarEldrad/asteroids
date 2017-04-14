@@ -54,8 +54,9 @@ namespace DK.Asteroids.GameLogic.Classes
             while (isAlive)
             {
                 obj.GetComponent<AudioSource>().Play();
-                Object.Instantiate(GameLoop.isSpriteRepresentation ? projectileSprite : projectile,
+                var bullet = Object.Instantiate(GameLoop.isSpriteRepresentation ? projectileSprite : projectile,
                     spawnPosition.position, Utils.DefineRotation(spawnPosition, spawnPosition.rotation.eulerAngles.y));
+                Object.Destroy(bullet, 2f);
                 yield return new WaitForSeconds(rateOfFire);
             }
         }
@@ -77,6 +78,12 @@ namespace DK.Asteroids.GameLogic.Classes
 
             Vector3 lineToTarget = target.position - obj.transform.position;
             obj.GetComponent<Rigidbody>().velocity = lineToTarget * movementSpeed;
+        }
+
+        public void OutOfBoundary()
+        {
+            if (Utils.IsWithinBoundary(obj)) return;
+            Utils.ReturnToBoundary(obj);
         }
 
         public void ActionOnCollide(Collider other)

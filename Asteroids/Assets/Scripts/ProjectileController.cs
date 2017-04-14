@@ -25,6 +25,11 @@ public class ProjectileController : MonoBehaviour {
         }
     }
 
+    void Update()
+    {
+        projectile.OutOfBoundary();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         projectile.OnCollideTriggerEnter(other);

@@ -93,10 +93,16 @@ namespace DK.Asteroids.GameLogic.Classes
             }
         }
 
-        public Transform GetPlayerTransform()
+        public static Transform GetPlayerTransform()
         {
             if (obj == null) return null;
             return obj.transform;
+        }
+
+        public void OutOfBoundary()
+        {
+            if (Utils.IsWithinBoundary(obj)) return;
+            Utils.ReturnToBoundary(obj);
         }
 
         public void MovePlayer(float thrust, float turning)

@@ -19,25 +19,13 @@ Platform assembly: D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_
 Loading D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_64\Asteroids_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_64\Asteroids_Data\Managed\DK.Asteroids.GameLogic.dll (this message is harmless)
 Loading D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_64\Asteroids_Data\Managed\DK.Asteroids.GameLogic.dll into Unity Child Domain
-- Completed reload, in  0.045 seconds
+- Completed reload, in  0.040 seconds
 Platform assembly: D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_64\Asteroids_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Unity Projects\Git-Asteroids\Asteroids\Builds\Windows x86_64\Asteroids_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 2646x1024 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.607902 ms
+UnloadTime: 1.475777 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1cdc -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.597594 ms
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 481.
-Total: 0.563251 ms (FindLiveObjects: 0.064024 ms CreateObjectMapping: 0.041332 ms MarkObjects: 0.451006 ms  DeleteObjects: 0.006078 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.905255 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 481.
-Total: 0.568519 ms (FindLiveObjects: 0.072939 ms CreateObjectMapping: 0.034443 ms MarkObjects: 0.453438 ms  DeleteObjects: 0.006483 ms)
-
+  Thread -> id: 368 -> priority: 1 

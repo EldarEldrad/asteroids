@@ -21,5 +21,22 @@ namespace DK.Asteroids.GameLogic.Classes
             }
             return transform.rotation;
         }
+
+        public static bool IsWithinBoundary(GameObject obj)
+        {
+            if (Mathf.Abs(obj.transform.position.x) <= GameBoundary.width && Mathf.Abs(obj.transform.position.z) <= GameBoundary.height) return true;
+            return false;
+        }
+
+        public static void ReturnToBoundary(GameObject obj)
+        {
+            if (obj.transform.position.x > GameBoundary.width) obj.transform.position = new Vector3(-GameBoundary.width, obj.transform.position.y, obj.transform.position.z);
+
+            if (obj.transform.position.x < -GameBoundary.width) obj.transform.position = new Vector3(GameBoundary.width, obj.transform.position.y, obj.transform.position.z);
+
+            if (obj.transform.position.z > GameBoundary.height) obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, -GameBoundary.height);
+
+            if (obj.transform.position.z < -GameBoundary.height) obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, GameBoundary.height);
+        }
     }
 }

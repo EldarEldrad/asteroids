@@ -23,6 +23,12 @@ namespace DK.Asteroids.GameLogic.Classes
             else rb.velocity = rb.gameObject.transform.forward * speed;
         }
 
+        public void OutOfBoundary()
+        {
+            if (Utils.IsWithinBoundary(obj)) return;
+            Utils.ReturnToBoundary(obj);
+        }
+
         public void OnCollideTriggerEnter(Collider other)
         {
             if (projectileType == 0 && other.tag != Constants.Tags.Boundary && other.tag != Constants.Tags.Bullet)
